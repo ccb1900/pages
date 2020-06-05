@@ -2,7 +2,11 @@ module.exports = {
   title: '献给新一代的文档',
   // theme: '@vuepress/blog',
   base: '/pages/',
-  description: 'java,mysql,php,redis,消息队列',
+  logo: '/logo.png',
+  description: 'java,mysql,php,redis,消息队列,laravel,spring',
+  head: [
+    ['link', { rel: 'icon', href: `/logo.png` }],
+  ],
   themeConfig: {
     displayAllHeaders: true,
     lastUpdated: '最近更新时间',

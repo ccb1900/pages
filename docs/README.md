@@ -1,7 +1,7 @@
 ---
 pageClass: custom-page-class
 home: true
-heroImage: /logo3.png
+heroImage: /logo.png
 heroText: 献给新一代的文档
 tagline: 那么，奔涌吧，后浪！
 actionText: 像我一样 →
