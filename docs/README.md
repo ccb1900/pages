@@ -5,7 +5,7 @@ heroImage: /logo3.png
 heroText: 献给新一代的文档
 tagline: 那么，奔涌吧，后浪！
 actionText: 像我一样 →
-actionLink: /guide/
+actionLink: https://github.com/ccb1900/pages
 features:
 - title: 满怀羡慕
   details: 人类积攒了几千年的财富，所有的知识、见识、智慧和艺术，像是专门为你们准备的礼物。
