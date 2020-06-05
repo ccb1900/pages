@@ -15,3 +15,5 @@ features:
   details: 因为你们这世上的小说、音乐、电影所表现的青春就不再是忧伤、迷茫，而是善良、勇敢、无私、无所畏惧，是心里有火，眼里有光，不用活着我们想象中的样子。
 footer: MIT Licensed | Copyright © 2020-present 后浪
 ---
+
+练习写作。

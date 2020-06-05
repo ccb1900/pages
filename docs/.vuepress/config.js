@@ -5,7 +5,7 @@ module.exports = {
   logo: '/logo.png',
   description: 'java,mysql,php,redis,消息队列,laravel,spring',
   head: [
-    ['link', { rel: 'icon', href: `/logo.png` }],
+    ['link', { rel: 'ico', href: `/logo.png` }],
   ],
   themeConfig: {
     displayAllHeaders: true,
