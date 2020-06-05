@@ -16,6 +16,7 @@ module.exports = {
       { text: 'Mysql', link: '/mysql/' },
       { text: 'Redis', link: '/redis/' },
       { text: '其他', link: '/other/' },
+      { text: 'Github', link: 'https://github.com/ccb1900/pages' },
       // { text: 'External', link: 'https://google.com' },
     ],
     sidebar: {
