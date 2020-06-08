@@ -67,11 +67,16 @@ module.exports = {
             ["/backend/rabbitmq/",'概述'],
             ["/backend/rabbitmq/AMQP",'AMQP'],
             ["/backend/rabbitmq/发布者",'发布者'],
-            ["/backend/rabbitmq/消费者",'消费者']
+            ["/backend/rabbitmq/消费者",'消费者'],
+            ["/backend/rabbitmq/例子",'例子'],
           ]
         },
         {
           title: 'RocketMQ',
+          children: [ /* ... */]
+        },
+        {
+          title: 'ActiveMQ',
           children: [ /* ... */]
         },
         {
@@ -164,6 +169,10 @@ module.exports = {
         },
         {
           title: '操作系统',
+          children: [ /* ... */]
+        },
+        {
+          title: '数据库',
           children: [ /* ... */]
         },
       ],
