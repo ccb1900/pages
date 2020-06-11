@@ -53,7 +53,7 @@ module.exports = {
           sidebarDepth: 2,    // 可选的, 默认值是 1
           children: [
             ["/backend/rust/", '概述'],
-            ["/backend/rust/常见编程概念/", '常见编程概念'],
+            ["/backend/rust/常见编程概念", '常见编程概念'],
           ]
         },
         {
