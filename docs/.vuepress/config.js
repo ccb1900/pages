@@ -9,6 +9,7 @@ module.exports = {
   ],
   themeConfig: {
     displayAllHeaders: true,
+    sidebarDepth: 2,
     lastUpdated: '最近更新时间',
     smoothScroll: true,
     // sidebar: 'auto',
@@ -18,6 +19,7 @@ module.exports = {
       { text: '前端', link: '/front/' },
       { text: '屠龙术', link: '/dragon/' },
       { text: '其他', link: '/other/' },
+      { text: '博客', link: '/blog/' },
       { text: 'Github', link: 'https://github.com/ccb1900/pages' },
       // { text: 'External', link: 'https://google.com' },
     ],
@@ -73,10 +75,6 @@ module.exports = {
         },
         {
           title: 'RocketMQ',
-          children: [ /* ... */]
-        },
-        {
-          title: 'ActiveMQ',
           children: [ /* ... */]
         },
         {
@@ -197,6 +195,11 @@ module.exports = {
           title: '大数据',
           children: [ /* ... */]
         },
+      ],
+      '/blog/': [
+        '',
+        'github action 自动部署 gh-pages',
+        '大文件分片上传',
       ]
     }
   }
