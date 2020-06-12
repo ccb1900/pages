@@ -9,7 +9,7 @@ module.exports = {
   ],
   themeConfig: {
     displayAllHeaders: true,
-    sidebarDepth: 2,
+    // sidebarDepth: 2,
     lastUpdated: '最近更新时间',
     smoothScroll: true,
     // sidebar: 'auto',
@@ -54,6 +54,10 @@ module.exports = {
           children: [
             ["/backend/rust/", '概述'],
             ["/backend/rust/常见编程概念", '常见编程概念'],
+            ["/backend/rust/所有权", '理解所有权'],
+            ["/backend/rust/使用结构体结构化关联的数据", '理解使用结构体结构化关联的数据所有权'],
+            ["/backend/rust/枚举和模式匹配", '枚举和模式匹配'],
+            ["/backend/rust/使用包，Crate和模块管理不断增长的项目", '使用包，Crate和模块管理不断增长的项目'],
           ]
         },
         {
