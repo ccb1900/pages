@@ -1,0 +1,41 @@
+2020-06-16 18:15:06,879 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-06-16 18:15:06,917 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.2.1/libexec/bin/user.properties
+2020-06-16 18:15:06,918 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.2.1/libexec/bin/system.properties
+2020-06-16 18:15:06,933 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-06-16 18:15:06,933 INFO o.a.j.JMeter: Version 5.2.1
+2020-06-16 18:15:06,933 INFO o.a.j.JMeter: java.version=11.0.7
+2020-06-16 18:15:06,933 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2020-06-16 18:15:06,933 INFO o.a.j.JMeter: os.name=Mac OS X
+2020-06-16 18:15:06,934 INFO o.a.j.JMeter: os.arch=x86_64
+2020-06-16 18:15:06,934 INFO o.a.j.JMeter: os.version=10.15.5
+2020-06-16 18:15:06,934 INFO o.a.j.JMeter: file.encoding=UTF-8
+2020-06-16 18:15:06,934 INFO o.a.j.JMeter: java.awt.headless=null
+2020-06-16 18:15:06,935 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-06-16 18:15:06,935 INFO o.a.j.JMeter: Available Processors =8
+2020-06-16 18:15:06,947 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-06-16 18:15:06,947 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-06-16 18:15:06,947 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.2.1/libexec
+2020-06-16 18:15:06,947 INFO o.a.j.JMeter: user.dir  =/Users/ccb/Desktop/zhouhao/awesome-doc
+2020-06-16 18:15:06,947 INFO o.a.j.JMeter: PWD       =/Users/ccb/Desktop/zhouhao/awesome-doc
+2020-06-16 18:15:06,949 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: wangdongdeMacBook-Pro.local FullName: localhost
+2020-06-16 18:15:08,413 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2020-06-16 18:15:08,423 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2020-06-16 18:15:08,423 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2020-06-16 18:15:08,532 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2020-06-16 18:15:09,431 INFO o.j.r.JARSourceHTTP: Found cached repo
+2020-06-16 18:15:09,601 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.3, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1]
+2020-06-16 18:15:09,603 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2020-06-16 18:15:11,391 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-16 18:15:11,392 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-16 18:15:11,392 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-16 18:15:11,392 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-16 18:15:11,392 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-06-16 18:15:11,393 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-06-16 18:15:11,801 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2020-06-16 18:15:11,802 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/5.2.1/libexec/bin/proxyserver.jks
+2020-06-16 18:15:11,942 INFO o.a.j.s.FileServer: Default base='/Users/ccb/Desktop/zhouhao/awesome-doc'
+2020-06-16 18:15:12,271 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-06-16 18:15:12,272 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-06-16 18:15:12,272 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-06-16 18:15:12,272 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-06-16 18:15:12,295 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
