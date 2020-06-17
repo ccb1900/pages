@@ -76,6 +76,7 @@ int main(int argc, char *argv[])
     // 处理就绪事件
     for (size_t i = 0; i < event_count; i++)
     {
+      // 处理接收请求
       if (events[i].data.fd == socket_desc)
       {
         // 设置为非阻塞，此处可以立刻返回？
@@ -88,6 +89,7 @@ int main(int argc, char *argv[])
         // setnonblocking(new_socket);
         event.events = EPOLLIN | EPOLLET;
         event.data.fd = new_socket;
+        // 注册请求
         if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, new_socket, &event) == -1)
         {
           fprintf(stderr, "Failed to add file descriptor to epoll\n");
