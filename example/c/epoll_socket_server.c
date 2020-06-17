@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
   struct sockaddr_in server, client;
   char *message;
 
-  int clients[1024];
+  int clients[3];
   int running = 1;
   char read_buffer[READ_SIZE + 1];
   struct epoll_event event, events[MAX_EVENTS];
@@ -68,9 +68,13 @@ int main(int argc, char *argv[])
   int client_count = 0;
   while (running)
   {
-
+    for (size_t i = 0; i < client_count; i++)
+    {
+      fprintf(stderr, "Failed to %d",clients[i]);
+    }
+    
     printf("\nPolling for input...\n");
-    // 阻塞，等待事件就绪
+    // 阻塞，等待事件就绪，如果采用水平触发，可能多次触发
     int event_count = epoll_wait(epoll_fd, events, MAX_EVENTS, 30000);
     printf("%d ready events \n", event_count);
     // 处理就绪事件
@@ -92,20 +96,21 @@ int main(int argc, char *argv[])
         // 注册请求
         if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, new_socket, &event) == -1)
         {
-          fprintf(stderr, "Failed to add file descriptor to epoll\n");
+          fprintf(stderr, "接收请求：Failed to add file descriptor to epoll\n");
           return -1;
         }
         clients[client_count] = new_socket;
         client_count++;
-        message = "Hello Client , I have received your connection. But I have to go now, bye\n";
-        write(new_socket, message, strlen(message));
+        // message = "HTTP/1.1 200 OK\nDate : Sat,\n31 Dec 2005 23 : 59 : 59 GMT\nContent -Type : text / html;charset = ISO - 8859 - 1 Content - Length : 122\n\n<h1>hello</h1>";
+        // write(new_socket, message, strlen(message));
       } else {
         for (size_t j = 0; j < client_count; j++)
         {
           if (events[i].data.fd == clients[j]) {
-            fprintf(stdout, "Failed to add file descriptor to epoll\n");
-            message = "hello hahaha\n";
+            fprintf(stdout, "response: Failed to add file descriptor to epoll\n");
+            message = "HTTP/1.1 200 OK\nDate : Sat,\n31 Dec 2005 23 : 59 : 59 GMT\nContent -Type : text / html;charset = ISO - 8859 - 1 Content - Length : 122\n\n<h1>hello</h1>";
             write(clients[j], message, strlen(message));
+            close(clients[j]);
           }
         }
         
