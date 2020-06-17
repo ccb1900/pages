@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 0
+sidebarDepth: 2
 collapsable: false
 ---
 
