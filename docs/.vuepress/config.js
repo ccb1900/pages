@@ -137,8 +137,9 @@ module.exports = {
         },
         {
           title: "Spring",
+          path: '/backend/spring/',
           children: [
-            /* ... */
+            ['/backend/spring/','spring中文手册']
           ],
         },
         {
