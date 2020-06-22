@@ -240,6 +240,7 @@ module.exports = {
           title: "算法",
           children: [
             /* ... */
+            'alg/一致性哈希'
           ],
         },
         {
