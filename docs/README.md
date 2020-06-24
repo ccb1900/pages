@@ -16,4 +16,11 @@ features:
 footer: MIT Licensed | Copyright © 2020-present 后浪
 ---
 
-练习写作。
+# 计划
+
+- 红黑树，实现了 epoll 文件系统
+- 最小四叉堆，Golang 相对定时器
+- mysql nested tree model
+- epoll 和 select，poll的区别，内核源码分析
+- Paxos 算法
+- spring framework 翻译
