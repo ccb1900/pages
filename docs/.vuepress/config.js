@@ -1,6 +1,7 @@
 module.exports = {
   title: "献给新一代的文档",
   plugins: [
+    require('./plugins/baidu-analytics/index.js'),
     [
       "@vuepress/blog",
       {
