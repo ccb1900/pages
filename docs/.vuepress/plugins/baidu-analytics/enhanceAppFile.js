@@ -1,6 +1,6 @@
 export default ({ router }) => {
   // 百度分析集成
-  if (process.env.NODE_ENV === 'production' && GA_ID && typeof window !== 'undefined') {
+  if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
     let _hmt = _hmt || [];
     (function () {
       let hm = document.createElement("script");
