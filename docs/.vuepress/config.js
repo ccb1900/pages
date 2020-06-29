@@ -166,7 +166,10 @@ module.exports = {
         {
           title: "微服务",
           children: [
-            /* ... */
+            ["配置中心","/"],
+            ["熔断降级","/"],
+            ["APIGATEWAY","/"],
+            ["APIGATEWAY","/"],
           ],
         },
         {
