@@ -23,4 +23,6 @@ footer: MIT Licensed | Copyright © 2020-present 后浪
 - mysql nested tree model
 - epoll 和 select，poll的区别，内核源码分析
 - Paxos 算法
+- 事件源模式
+- raft协议
 - spring framework 翻译

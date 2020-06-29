@@ -16,7 +16,7 @@ module.exports = {
             layout: "IndexPost",
             itemPermalink: "/post/:year/:month/:day/:slug",
             pagination: {
-              lengthPerPage: 10,
+              lengthPerPage: 20,
               layout: "IndexPost",
             },
           },
