@@ -1,7 +1,7 @@
 module.exports = {
   title: "献给新一代的文档",
   plugins: [
-    require('./plugins/baidu-analytics/index.js'),
+    require("./plugins/baidu-analytics/index.js"),
     [
       "@vuepress/blog",
       {
@@ -45,6 +45,7 @@ module.exports = {
       { text: "前端", link: "/front/" },
       { text: "屠龙术", link: "/dragon/" },
       { text: "其他", link: "/other/" },
+      { text: "菜谱", link: "/recipe/" },
       { text: "博客", link: "/post/" },
       { text: "Github", link: "https://github.com/ccb1900/pages" },
     ],
@@ -62,9 +63,7 @@ module.exports = {
           // path: '/backend/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: [
-            ["/backend/golang/", "参考手册"],
-          ],
+          children: [["/backend/golang/", "参考手册"]],
         },
         {
           title: "PHP", // 必要的
@@ -140,10 +139,8 @@ module.exports = {
         },
         {
           title: "Spring",
-          path: '/backend/spring/',
-          children: [
-            ['/backend/spring/','spring中文手册']
-          ],
+          path: "/backend/spring/",
+          children: [["/backend/spring/", "spring中文手册"]],
         },
         {
           title: "Mybatis",
@@ -246,7 +243,7 @@ module.exports = {
           title: "算法",
           children: [
             /* ... */
-            'alg/一致性哈希'
+            "alg/一致性哈希",
           ],
         },
         {
@@ -303,6 +300,17 @@ module.exports = {
           title: "大数据",
           children: [
             /* ... */
+          ],
+        },
+      ],
+      "/recipe/": [
+        {
+          title: "菜谱",
+          path: "/recipe/",
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            "家常大盘鸡",
           ],
         },
       ],
