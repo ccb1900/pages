@@ -1,6 +1,8 @@
 # cas 示例说明
 
-进入sso目录, 
+进入 example/go，go download
+
+进入 sso 目录，
 
 ## 准备数据
 
