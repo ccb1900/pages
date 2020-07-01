@@ -181,6 +181,13 @@ module.exports = {
             /* ... */
           ],
         },
+        {
+          title: "翻译",
+          children: [
+            ["/backend/translate/CAS Protocol 3.0 Specification", "CAS 原文"],
+            ["/backend/translate/cas 3.0 协议规范翻译", "cas 3.0 协议规范翻译"],
+          ],
+        },
       ],
       "/front/": [
         {
@@ -310,7 +317,8 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 1,
           children: [
-            "家常大盘鸡",
+            "大盘鸡",
+            "糖醋排骨",
           ],
         },
       ],
