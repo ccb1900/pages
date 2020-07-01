@@ -316,7 +316,10 @@ module.exports = {
           path: "/recipe/",
           collapsable: false,
           sidebarDepth: 1,
-          children: ["家常大盘鸡"],
+          children: [
+            "大盘鸡",
+            "糖醋排骨",
+          ],
         },
       ],
       // "/blog/": [

@@ -18,11 +18,16 @@ footer: MIT Licensed | Copyright © 2020-present 后浪
 
 # 计划
 
-- 红黑树，实现了 epoll 文件系统
-- 最小四叉堆，Golang 相对定时器
-- mysql nested tree model
-- epoll 和 select，poll的区别，内核源码分析
-- Paxos 算法
-- 事件源模式
-- raft协议
-- spring framework 翻译
+1. 红黑树，实现了 epoll 文件系统
+2. 最小四叉堆，Golang 相对定时器
+3. mysql nested tree model
+4. epoll 和 select，poll的区别，内核源码分析
+5. Paxos 算法
+6. 事件源模式
+7. raft协议
+8. spring framework 翻译
+9. cas 协议翻译
+10. 大盘鸡菜谱完善
+11. 糖醋排骨菜谱
+12. 数据结构-栈
+13. 数据结构-队列
