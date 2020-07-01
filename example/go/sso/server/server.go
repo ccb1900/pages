@@ -37,7 +37,7 @@ func Server() {
 	authM := r.Group("/")
 	authM.Use(middleware.Sso())
 	authM.DELETE("/logout", auth.Logout)
-	authM.POST("/validate", auth.Validate)
+	authM.GET("/validate", auth.Validate)
 	authM.POST("/serviceValidate", auth.Validate)
 	authM.POST("/proxyValidate", auth.Validate)
 	authM.POST("/proxy", auth.Validate)
