@@ -1,12 +1,10 @@
 package main
 
 import (
-	"crypto/md5"
-	"encoding/hex"
+	"fmt"
+	"itiswho.com/example/utils"
 )
 
 func main() {
-	data := []byte("hello")
-	b := md5.Sum(data)
-	hex.EncodeToString(b[:])
+	fmt.Println(utils.Md5(utils.StrRand(12)))
 }

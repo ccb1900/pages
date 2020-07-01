@@ -2,11 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Firefox()
-driver.get("http://www.python.org")
-assert "Python" in driver.title
-elem = driver.find_element_by_name("q")
-elem.clear()
-elem.send_keys("pycon")
-elem.send_keys(Keys.RETURN)
-assert "No results found." not in driver.page_source
-driver.close()
+driver.get("https://quark.sm.cn/s?q=北京大学")
+nodes = driver.find_element_by_css_selector('.c-tab-list:nth-child(1)')
+
+nodes.click()
+
+print(nodes)
+# driver.close()
