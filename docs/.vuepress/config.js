@@ -63,7 +63,11 @@ module.exports = {
           // path: '/backend/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: [["/backend/golang/", "参考手册"]],
+          children: [
+            ["/backend/golang/", "参考手册"],
+            ["/backend/golang/单例模式", "单例模式"],
+            ["/backend/golang/go 语言设计与实现", "go 语言设计与实现"],
+          ],
         },
         {
           title: "PHP", // 必要的
