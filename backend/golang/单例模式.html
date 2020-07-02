@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>单例模式 | 献给新一代的文档</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="ico" href="/pages/logo.png">
+    <meta name="description" content="java,mysql,php,redis,消息队列,laravel,spring">
+    <link rel="preload" href="/pages/assets/css/0.styles.b303da3d.css" as="style"><link rel="preload" href="/pages/assets/js/app.cef0908a.js" as="script"><link rel="preload" href="/pages/assets/js/1.14ff8b03.js" as="script"><link rel="preload" href="/pages/assets/js/20.d30a5f32.js" as="script"><link rel="prefetch" href="/pages/assets/js/10.ca1643d2.js"><link rel="prefetch" href="/pages/assets/js/11.63ac0c09.js"><link rel="prefetch" href="/pages/assets/js/12.240e6778.js"><link rel="prefetch" href="/pages/assets/js/13.6ff6f760.js"><link rel="prefetch" href="/pages/assets/js/14.c0efa981.js"><link rel="prefetch" href="/pages/assets/js/15.b7a7561a.js"><link rel="prefetch" href="/pages/assets/js/16.ec833b42.js"><link rel="prefetch" href="/pages/assets/js/17.ceb6a9ad.js"><link rel="prefetch" href="/pages/assets/js/18.9ca07f6f.js"><link rel="prefetch" href="/pages/assets/js/19.44ea52c7.js"><link rel="prefetch" href="/pages/assets/js/21.b427440c.js"><link rel="prefetch" href="/pages/assets/js/22.f077169b.js"><link rel="prefetch" href="/pages/assets/js/23.1bee8ee0.js"><link rel="prefetch" href="/pages/assets/js/24.aabc957a.js"><link rel="prefetch" href="/pages/assets/js/25.30382b1e.js"><link rel="prefetch" href="/pages/assets/js/26.4875534e.js"><link rel="prefetch" href="/pages/assets/js/27.bb59b285.js"><link rel="prefetch" href="/pages/assets/js/28.55813a77.js"><link rel="prefetch" href="/pages/assets/js/29.c4bbfe78.js"><link rel="prefetch" href="/pages/assets/js/30.87845f8b.js"><link rel="prefetch" href="/pages/assets/js/31.30f816e2.js"><link rel="prefetch" href="/pages/assets/js/32.caac603e.js"><link rel="prefetch" href="/pages/assets/js/33.5f650063.js"><link rel="prefetch" href="/pages/assets/js/34.c993a56f.js"><link rel="prefetch" href="/pages/assets/js/35.1b547e29.js"><link rel="prefetch" href="/pages/assets/js/36.613a9434.js"><link rel="prefetch" href="/pages/assets/js/37.691d8c9b.js"><link rel="prefetch" href="/pages/assets/js/38.24b16ef0.js"><link rel="prefetch" href="/pages/assets/js/39.75712b0f.js"><link rel="prefetch" href="/pages/assets/js/4.2a85abca.js"><link rel="prefetch" href="/pages/assets/js/40.51295b7e.js"><link rel="prefetch" href="/pages/assets/js/41.93aaf94a.js"><link rel="prefetch" href="/pages/assets/js/42.c58553fe.js"><link rel="prefetch" href="/pages/assets/js/43.b21a2282.js"><link rel="prefetch" href="/pages/assets/js/44.536b791d.js"><link rel="prefetch" href="/pages/assets/js/45.f4657e87.js"><link rel="prefetch" href="/pages/assets/js/46.e27c18ea.js"><link rel="prefetch" href="/pages/assets/js/47.9075e750.js"><link rel="prefetch" href="/pages/assets/js/48.194f4da2.js"><link rel="prefetch" href="/pages/assets/js/49.e59c717d.js"><link rel="prefetch" href="/pages/assets/js/5.a11801ae.js"><link rel="prefetch" href="/pages/assets/js/50.a9a754fa.js"><link rel="prefetch" href="/pages/assets/js/51.910ca42d.js"><link rel="prefetch" href="/pages/assets/js/52.e7c462a0.js"><link rel="prefetch" href="/pages/assets/js/53.35484e06.js"><link rel="prefetch" href="/pages/assets/js/54.d346f1a4.js"><link rel="prefetch" href="/pages/assets/js/55.af3b3ddd.js"><link rel="prefetch" href="/pages/assets/js/56.59d89bc4.js"><link rel="prefetch" href="/pages/assets/js/57.eb69991b.js"><link rel="prefetch" href="/pages/assets/js/58.21786c28.js"><link rel="prefetch" href="/pages/assets/js/59.d8fe51f0.js"><link rel="prefetch" href="/pages/assets/js/6.e0223d64.js"><link rel="prefetch" href="/pages/assets/js/60.5c123af7.js"><link rel="prefetch" href="/pages/assets/js/61.3ee15a00.js"><link rel="prefetch" href="/pages/assets/js/62.2dd2ee3e.js"><link rel="prefetch" href="/pages/assets/js/63.0983587f.js"><link rel="prefetch" href="/pages/assets/js/64.5c3d3791.js"><link rel="prefetch" href="/pages/assets/js/65.a0fc7c20.js"><link rel="prefetch" href="/pages/assets/js/66.acb00860.js"><link rel="prefetch" href="/pages/assets/js/67.d61e13c2.js"><link rel="prefetch" href="/pages/assets/js/68.3a0a7a50.js"><link rel="prefetch" href="/pages/assets/js/69.f23ae1c1.js"><link rel="prefetch" href="/pages/assets/js/7.8965607c.js"><link rel="prefetch" href="/pages/assets/js/70.2f6e3a84.js"><link rel="prefetch" href="/pages/assets/js/71.a51196c1.js"><link rel="prefetch" href="/pages/assets/js/72.e101f3e6.js"><link rel="prefetch" href="/pages/assets/js/73.050d4ab5.js"><link rel="prefetch" href="/pages/assets/js/74.bf012d4b.js"><link rel="prefetch" href="/pages/assets/js/75.4c74bdbe.js"><link rel="prefetch" href="/pages/assets/js/8.cb12b21f.js"><link rel="prefetch" href="/pages/assets/js/9.42673838.js"><link rel="prefetch" href="/pages/assets/js/vuejs-paginate.d4ef26f8.js">
+    <link rel="stylesheet" href="/pages/assets/css/0.styles.b303da3d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pages/" class="home-link router-link-active"><!----> <span class="site-name">献给新一代的文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/pages/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/pages/backend/" class="nav-link router-link-active">
+  后端
+</a></div><div class="nav-item"><a href="/pages/front/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/pages/dragon/" class="nav-link">
+  屠龙术
+</a></div><div class="nav-item"><a href="/pages/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="/pages/recipe/" class="nav-link">
+  菜谱
+</a></div><div class="nav-item"><a href="/pages/post/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="https://github.com/ccb1900/pages" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/pages/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/pages/backend/" class="nav-link router-link-active">
+  后端
+</a></div><div class="nav-item"><a href="/pages/front/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/pages/dragon/" class="nav-link">
+  屠龙术
+</a></div><div class="nav-item"><a href="/pages/other/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="/pages/recipe/" class="nav-link">
+  菜谱
+</a></div><div class="nav-item"><a href="/pages/post/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="https://github.com/ccb1900/pages" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Golang</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/backend/golang/" aria-current="page" class="sidebar-link">参考手册</a></li><li><a href="/pages/backend/golang/单例模式.html" class="active sidebar-link">单例模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/backend/golang/单例模式.html#普通实现（不支持并发）" class="sidebar-link">普通实现（不支持并发）</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/单例模式.html#加锁实现" class="sidebar-link">加锁实现</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/单例模式.html#sync-once-实现" class="sidebar-link">sync.once 实现</a></li></ul></li><li><a href="/pages/backend/golang/go 语言设计与实现.html" class="sidebar-link">go 语言设计与实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#编译原理" class="sidebar-link">编译原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#词法与语法分析" class="sidebar-link">词法与语法分析</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#类型检查和ast转换" class="sidebar-link">类型检查和AST转换</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#通用ssa生成" class="sidebar-link">通用SSA生成</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#机器代码生成" class="sidebar-link">机器代码生成</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#运行时" class="sidebar-link">运行时</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#基础知识" class="sidebar-link">基础知识</a></li><li class="sidebar-sub-header"><a href="/pages/backend/golang/go 语言设计与实现.html#进阶知识" class="sidebar-link">进阶知识</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>PHP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Rust</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Netty</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>RabbitMQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>RocketMQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Kafka</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/pages/backend/spring/" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Mybatis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Laravel</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Mysql</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>微服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>安全</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>翻译</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="单例模式"><a href="#单例模式" class="header-anchor">#</a> 单例模式</h1> <p><a href="https://github.com/ccb1900/pages/tree/master/example/go/singleton" target="_blank" rel="noopener noreferrer">https://github.com/ccb1900/pages/tree/master/example/go/singleton<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="普通实现（不支持并发）"><a href="#普通实现（不支持并发）" class="header-anchor">#</a> 普通实现（不支持并发）</h2> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> general
+
+<span class="token keyword">type</span> Singleton <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> instance <span class="token operator">*</span>Singleton
+
+<span class="token keyword">func</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>Singleton <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> instance <span class="token operator">==</span><span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		instance <span class="token operator">=</span> <span class="token function">new</span><span class="token punctuation">(</span>Singleton<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> instance
+<span class="token punctuation">}</span></code></pre></div><h2 id="加锁实现"><a href="#加锁实现" class="header-anchor">#</a> 加锁实现</h2> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> mutex
+
+<span class="token keyword">import</span> <span class="token string">&quot;sync&quot;</span>
+
+<span class="token keyword">type</span> Singleton <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> instance <span class="token operator">*</span>Singleton
+<span class="token keyword">var</span> lock sync<span class="token punctuation">.</span>Mutex
+
+<span class="token keyword">func</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>Singleton <span class="token punctuation">{</span>
+	lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> instance <span class="token operator">==</span><span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		instance <span class="token operator">=</span> <span class="token function">new</span><span class="token punctuation">(</span>Singleton<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">return</span> instance
+<span class="token punctuation">}</span></code></pre></div><h2 id="sync-once-实现"><a href="#sync-once-实现" class="header-anchor">#</a> sync.once 实现</h2> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> special
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;sync&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> Singleton <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> instance <span class="token operator">*</span>Singleton
+<span class="token keyword">var</span> once sync<span class="token punctuation">.</span>Once
+<span class="token keyword">func</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>Singleton <span class="token punctuation">{</span>
+	<span class="token comment">// 仅执行一次</span>
+	once<span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;once&quot;</span><span class="token punctuation">)</span>
+		instance <span class="token operator">=</span> <span class="token function">new</span><span class="token punctuation">(</span>Singleton<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">return</span> instance
+<span class="token punctuation">}</span></code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新时间:</span> <span class="time">7/2/2020, 7:08:26 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/backend/golang/" class="prev router-link-active">
+        参考手册
+      </a></span> <span class="next"><a href="/pages/backend/golang/go 语言设计与实现.html">
+        go 语言设计与实现
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/pages/assets/js/app.cef0908a.js" defer></script><script src="/pages/assets/js/1.14ff8b03.js" defer></script><script src="/pages/assets/js/20.d30a5f32.js" defer></script>
+  </body>
+</html>
