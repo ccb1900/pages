@@ -62,6 +62,14 @@ func StrRand(len int) string  {
 	return s
 }
 
+func Rand(min int,max int) int  {
+	if min >= max {
+		panic("min can not bigger than max")
+	}
+	rand.Seed(time.Now().UnixNano())
+	return rand.Intn(max-min)+min
+}
+
 // 整数转换成可见字符
 func ToChar(v int) string  {
 	if v < 33 {
