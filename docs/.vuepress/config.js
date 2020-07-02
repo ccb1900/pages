@@ -253,7 +253,10 @@ module.exports = {
         {
           title: "数据结构",
           children: [
-            /* ... */
+            ["/dragon/data-struct/队列","队列"],
+            ["/dragon/data-struct/栈","栈"],
+            ["/dragon/data-struct/双端队列","双端队列"],
+            ["/dragon/data-struct/二叉树","二叉树"],
           ],
         },
         {
