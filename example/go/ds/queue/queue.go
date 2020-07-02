@@ -12,11 +12,17 @@ type Queue struct {
 }
 
 func (queue *Queue)Enqueue(v interface{})  {
-	queue.size++
 	newNode := new(node)
 	newNode.data = v
+
 	queue.rear.next = newNode
 	queue.rear = newNode
+
+	if queue.IsEmpty() {
+		queue.head.next = queue.rear
+	}
+
+	queue.size++
 }
 
 func (queue *Queue)Dequeue() interface{}  {
@@ -30,7 +36,7 @@ func (queue *Queue)Dequeue() interface{}  {
 }
 
 func (queue *Queue)IsEmpty() bool  {
-	return queue.size == 0
+	return queue.head.next == nil
 }
 
 func (queue *Queue)Size() int  {
