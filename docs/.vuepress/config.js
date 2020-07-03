@@ -265,7 +265,10 @@ module.exports = {
           title: "算法",
           children: [
             /* ... */
-            "alg/一致性哈希",
+            ["/dragon/alg/一致性哈希", "一致性哈希"],
+            ["/dragon/alg/图的广度优先遍历", "图的广度优先遍历"],
+            ["/dragon/alg/图的深度优先遍历", "图的深度优先遍历"],
+            ["/dragon/alg/生成树", "生成树"],
           ],
         },
         {
