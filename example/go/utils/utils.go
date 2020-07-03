@@ -11,12 +11,7 @@ import (
 	"time"
 )
 
-/**
-** 代码段
-*/
-
-
-// 计算字符串的md5
+// 计算字符串的md5，输出16进制
 func Md5(s string) string {
 	m := md5.Sum([]byte(s))
 	return hex.EncodeToString(m[:])
@@ -56,12 +51,13 @@ func StrRand(len int) string  {
 	s := ""
 	rand.Seed(time.Now().UnixNano())
 	for i:=0;i<len;i++ {
-		s += seeds[rand.Intn(94)]
+		s += seeds[Rand(0,94)]
 	}
 
 	return s
 }
 
+// 生成随机数
 func Rand(min int,max int) int  {
 	if min >= max {
 		panic("min can not bigger than max")

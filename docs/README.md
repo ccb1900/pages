@@ -29,5 +29,4 @@ footer: MIT Licensed | Copyright © 2020-present 后浪
 9. cas 协议翻译
 10. 大盘鸡菜谱完善
 11. 糖醋排骨菜谱
-12. 数据结构-栈
-13. 数据结构-队列
+12. 图的表示

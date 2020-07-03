@@ -64,9 +64,10 @@ module.exports = {
           collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
-            ["/backend/golang/", "参考手册"],
-            ["/backend/golang/单例模式", "单例模式"],
-            ["/backend/golang/go 语言设计与实现", "go 语言设计与实现"],
+            ["/backend/golang/", "golang 参考手册"],
+            ["/backend/golang/单例模式", "golang 单例模式"],
+            ["/backend/golang/go 语言设计与实现", "golang 语言设计与实现"],
+            ["/backend/golang/常用工具函数", "golang 常用工具函数"],
           ],
         },
         {
@@ -253,10 +254,11 @@ module.exports = {
         {
           title: "数据结构",
           children: [
-            ["/dragon/data-struct/队列","队列"],
-            ["/dragon/data-struct/栈","栈"],
-            ["/dragon/data-struct/双端队列","双端队列"],
-            ["/dragon/data-struct/二叉树","二叉树"],
+            ["/dragon/data-struct/队列", "队列"],
+            ["/dragon/data-struct/栈", "栈"],
+            ["/dragon/data-struct/双端队列", "双端队列"],
+            ["/dragon/data-struct/二叉树", "二叉树"],
+            ["/dragon/data-struct/图", "图"],
           ],
         },
         {
