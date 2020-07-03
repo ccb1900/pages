@@ -4,6 +4,6 @@ import (
 	"testing"
 )
 
-func TestGraph(t *testing.T) {
+func TestLocalGraph(t *testing.T) {
 	t.Log("graph")
 }

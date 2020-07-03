@@ -6,7 +6,6 @@ import (
 )
 
 func TestDfs(t *testing.T) {
-	g := graph.TestGraph()
 	dfs := New()
-	dfs.Dfs(g)
+	dfs.Dfs(graph.TestGraph())
 }

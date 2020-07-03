@@ -2,7 +2,7 @@ package dfs
 
 import (
 	"fmt"
-	graph2 "itiswho.com/example/ds/graph/graph"
+	"itiswho.com/example/ds/graph/igraph"
 )
 
 type Dfs struct {
@@ -10,18 +10,18 @@ type Dfs struct {
 }
 
 // 深度优先遍历
-func (d *Dfs) Dfs (g *graph2.Graph)  {
+func (d *Dfs) Dfs (g igraph.IGraph)  {
 	d.visited = make([]bool,g.V())
 	d.visit(g,0)
 }
 
-func (d *Dfs) visit (g *graph2.Graph,index int)  {
+func (d *Dfs) visit (g igraph.IGraph,index int)  {
 	if !d.visited[index] {
 		d.visited[index] = true
-		adjList := g.AdjList()
-		fmt.Println(adjList[index].Data())
-		for i := 0;i< len(adjList[index].Edges());i++ {
-			d.visit(g,adjList[index].Edges()[i].Data())
+		vnode := g.GetAdjList(index)
+		fmt.Println(vnode.Index(),"@",vnode.Data())
+		for i := 0;i< vnode.Edges().Size();i++ {
+			d.visit(g,vnode.Edges().Get(i).(igraph.IENode).VIndex())
 		}
 	}
 }

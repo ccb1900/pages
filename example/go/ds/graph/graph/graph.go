@@ -1,99 +1,87 @@
 package graph
 
-// 顶点节点
-type VNode struct {
-	data interface{}
-	edges []*Enode // 边表
-}
+import (
+	"itiswho.com/example/ds/graph/igraph"
+	"itiswho.com/example/utils"
+)
 
-func (v *VNode) Data() interface{} {
-	return v.data
-}
-
-func (v *VNode) Edges() []*Enode {
-	return v.edges
-}
-
-// 边节点记录索引
-type Enode struct {
-	index int
-}
-
-func (e *Enode) Data() int {
-	return e.index
-}
+// 图数据结构
 type Graph struct {
 	e       int      // 边数
 	v       int      // 顶点数
-	adjList []*VNode //邻接表
+	adjList igraph.IList //顶点表
 }
 
+// 根据索引获取顶点
+func (g *Graph) GetAdjList(index int) igraph.IVNode {
+	return g.adjList.Get(index).(igraph.IVNode)
+}
+
+// 获取边数
+func (g *Graph) E() int {
+	return g.e
+}
+
+// 获取顶点数
 func (g *Graph) V() int {
 	return g.v
 }
 
-func (g *Graph) AdjList() []*VNode {
-	return g.adjList
-}
-
 // 增加节点
-func (g *Graph) AddVertex(v interface{})  {
+func (g *Graph) AddVertex(v igraph.IVNode)  {
 	g.v++
-	newNode := new(VNode)
-	newNode.edges = make([]*Enode,0)
-	newNode.data = v
-
-	g.adjList = append(g.adjList,newNode)
+	g.adjList.Add(v)
 }
 
 // 增加边
 func (g *Graph) AddEdge(u int,v int)  {
 	g.e++
-	newENode := new(Enode)
-	newENode.index = v-1
-
-	g.adjList[u-1].edges = append(g.adjList[u-1].edges, newENode)
+	newENode := new(ENode)
+	newENode.index = v
+	g.GetAdjList(u).AddEdges(newENode)
 
 }
 
-func New() *Graph {
+// 图初始化
+func New() igraph.IGraph {
 	g := new(Graph)
-	g.adjList = make([]*VNode,0)
+	g.adjList = IIList()
 	return g
 }
 
-func TestGraph() *Graph  {
+// 生成测试用的图
+func TestGraph() igraph.IGraph  {
 	g := New()
-	for j :=1;j<=16;j++ {
-		g.AddVertex(j)
+	for j :=0;j<16;j++ {
+		g.AddVertex(IVNode(j,utils.Rand(0,100)))
 	}
 	for i :=1;i<=16;i++ {
 		if i-1 > 0 {
-			g.AddEdge(i,i-1)
+			g.AddEdge(i-1,i-2)
 			if i+3 <= 16 {
-				g.AddEdge(i,i+3)
+				g.AddEdge(i-1,i+2)
 			}
 			if i-5 > 0 {
-				g.AddEdge(i,i-5)
+				g.AddEdge(i-1,i-5-1)
 			}
 		}
 
 		if i%4 > 0 {
-			g.AddEdge(i,i+1)
+			g.AddEdge(i-1,i+1-1)
 			if i+5 <= 16 {
-				g.AddEdge(i,i+5)
+				g.AddEdge(i-1,i+5-1)
 			}
 			if i-3 > 0 {
-				g.AddEdge(i,i-3)
+				g.AddEdge(i-1,i-3-1)
 			}
 		}
 
 		if i+4 <= 16 {
-			g.AddEdge(i,i+4)
+			g.AddEdge(i-1,i+4-1)
 		}
 
 		if i-4 > 0 {
-			g.AddEdge(i,i-4)
+			g.AddEdge(i-1,i-4-1)
 		}
 	}
 
