@@ -33,6 +33,7 @@ type IENode interface {
 	// 获取顶点索引
 	VIndex() int
 	// 可以增加边的一些属性接口
+	Weight() int // 权重
 }
 
 // 集合接口

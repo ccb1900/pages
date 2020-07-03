@@ -29,4 +29,4 @@ footer: MIT Licensed | Copyright © 2020-present 后浪
 9. cas 协议翻译
 10. 大盘鸡菜谱完善
 11. 糖醋排骨菜谱
-12. 图的表示
+12. 图的邻接矩阵表示

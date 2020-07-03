@@ -1,6 +1,7 @@
 package graph
 
 import (
+	"fmt"
 	"itiswho.com/example/ds/graph/igraph"
 	"itiswho.com/example/utils"
 )
@@ -49,7 +50,28 @@ func New() igraph.IGraph {
 	return g
 }
 
-// 生成测试用的图
+// 测试-非连通图
+func TestNotConnectedGraph() igraph.IGraph  {
+	g := New()
+	for j := 0;j<14;j++ {
+		fmt.Println(j,utils.ToChar(65+j))
+		g.AddVertex(IVNode(j,utils.ToChar(65+j)))
+	}
+	g.AddEdge(0,1)
+	g.AddEdge(0,2)
+	g.AddEdge(0,3)
+	g.AddEdge(1,4)
+	g.AddEdge(1,5)
+	g.AddEdge(2,7)
+	g.AddEdge(3,8)
+	g.AddEdge(3,9)
+	g.AddEdge(4,10)
+	g.AddEdge(7,6)
+	g.AddEdge(9,11)
+
+	return g
+}
+// 测试-连通图
 func TestGraph() igraph.IGraph  {
 	g := New()
 	for j :=0;j<16;j++ {
