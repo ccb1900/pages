@@ -22,4 +22,6 @@ brew cask upgrade osxfuse
 brew cask install ntfstool
 ```
 
+可能会有权限问题，这个是通用的，可以自行解决。
+
 have fun
