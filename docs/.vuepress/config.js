@@ -68,6 +68,7 @@ module.exports = {
             ["/backend/golang/单例模式", "golang 单例模式"],
             ["/backend/golang/go 语言设计与实现", "golang 语言设计与实现"],
             ["/backend/golang/常用工具函数", "golang 常用工具函数"],
+            ["/backend/golang/1900-22-go 并发机制", "并发机制"],
           ],
         },
         {
@@ -266,6 +267,7 @@ module.exports = {
           children: [
             /* ... */
             ["/dragon/alg/一致性哈希", "一致性哈希"],
+            ["/dragon/alg/动态规划", "动态规划"],
             ["/dragon/alg/图的广度优先遍历", "图的广度优先遍历"],
             ["/dragon/alg/图的深度优先遍历", "图的深度优先遍历"],
             ["/dragon/alg/生成树", "生成树"],

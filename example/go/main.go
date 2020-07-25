@@ -1,10 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"itiswho.com/example/utils"
+	"itiswho.com/example/concurrent/e2"
 )
 
+func init()  {
+	println("main init")
+}
 func main() {
-	fmt.Println(utils.Md5(utils.StrRand(12)))
+	e2.Handle()
 }
