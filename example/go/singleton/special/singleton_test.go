@@ -1,6 +1,7 @@
 package special
 
 import (
+	"fmt"
 	"github.com/go-playground/assert/v2"
 	"sync"
 	"testing"
@@ -27,5 +28,12 @@ func TestGetInstance(t *testing.T) {
 	for j:=0;j<num-1;j++ {
 		assert.Equal(t,s[j],s[j+1])
 	}
+}
 
+func TestGetInstance2(t *testing.T) {
+	ss := GetInstance()
+	ss2 := GetInstance()
+	ss3 := GetInstance()
+
+	fmt.Println(ss,ss2,ss3)
 }
