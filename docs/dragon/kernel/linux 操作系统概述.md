@@ -36,7 +36,9 @@ api设计
 
 makefile
 
-<<< @/example/c/kernel/Makefile
+```shell
+@/example/c/kernel/Makefile
+```
 
 插入到内核
 
@@ -63,6 +65,8 @@ sudo rmmod hello
 ```
 
 ## multipass
+
+镜像可能下载比较慢，中科大有镜像，但是mac和windows不能用。
 
 使用 multipass 作为开发环境。
 
