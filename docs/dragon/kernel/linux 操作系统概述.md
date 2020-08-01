@@ -61,3 +61,20 @@ lsmod
 ```shell
 sudo rmmod hello
 ```
+
+## multipass
+
+使用 multipass 作为开发环境。
+
+挂载宿主机目录到 multipass 实例。命令含义为
+挂载宿主机当前目录到实例的 /app 目录
+
+一般不能直接挂载到根目录下，需要提前在实例中创建 /app 目录，然后
+使用 chown 修改权限。
+
+如果是挂载到/home/user/app目录，则不需要提前做任何操作。
+
+```shell
+multipass mount . ubuntu:/app
+multipass mount . ubuntu:/home/test/app
+```
