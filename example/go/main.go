@@ -1,12 +1,14 @@
 package main
 
 import (
-	"itiswho.com/example/concurrent/e2"
+	"fmt"
+	"itiswho.com/example/xtzx"
 )
 
 func init()  {
 	println("main init")
 }
 func main() {
-	e2.Handle()
+	xtzx.Save()
+	fmt.Println("over...")
 }
