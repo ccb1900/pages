@@ -6,8 +6,5 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  },
-  "resolutions": {
-    "watchpack": "1.6.1"
   }
 }

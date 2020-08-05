@@ -68,6 +68,7 @@ module.exports = {
             ["/backend/golang/单例模式", "golang 单例模式"],
             ["/backend/golang/go 语言设计与实现", "golang 语言设计与实现"],
             ["/backend/golang/常用工具函数", "golang 常用工具函数"],
+            ["/backend/golang/1900-22-go 并发机制", "并发机制"],
           ],
         },
         {
@@ -266,6 +267,7 @@ module.exports = {
           children: [
             /* ... */
             ["/dragon/alg/一致性哈希", "一致性哈希"],
+            ["/dragon/alg/动态规划", "动态规划"],
             ["/dragon/alg/图的广度优先遍历", "图的广度优先遍历"],
             ["/dragon/alg/图的深度优先遍历", "图的深度优先遍历"],
             ["/dragon/alg/生成树", "生成树"],
@@ -278,19 +280,55 @@ module.exports = {
           ],
         },
         {
+          title: "Linux 内核分析与应用",
+          path: "/dragon/kernel/",
+          children: [
+            /* ... */
+            ["/dragon/kernel/linux 操作系统概述", "linux 操作系统概述"],
+            ["/dragon/kernel/内存寻址", "内存寻址"],
+            ["/dragon/kernel/进程管理", "进程管理"],
+            ["/dragon/kernel/内存管理", "内存管理"],
+            ["/dragon/kernel/中断", "中断"],
+            ["/dragon/kernel/系统调用", "系统调用"],
+            ["/dragon/kernel/内核同步", "内核同步"],
+            ["/dragon/kernel/文件系统", "文件系统"],
+            ["/dragon/kernel/设备驱动", "设备驱动"],
+          ],
+        },
+        {
+          title: "清华操作系统",
+          path: "/dragon/os/tsinghua/",
+          children: [
+            /* ... */
+          ],
+        },
+        {
+          title: "清华高级操作系统",
+          path: "/dragon/os/tsinghua/",
+          children: [
+            /* ... */
+          ],
+        },
+        {
           title: "计算机网络",
           children: [
             /* ... */
           ],
         },
         {
-          title: "操作系统",
+          title: "数据库",
           children: [
             /* ... */
           ],
         },
         {
-          title: "数据库",
+          title: "计算机组成原理",
+          children: [
+            /* ... */
+          ],
+        },
+        {
+          title: "计算机体系结构",
           children: [
             /* ... */
           ],

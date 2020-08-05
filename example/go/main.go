@@ -2,9 +2,13 @@ package main
 
 import (
 	"fmt"
-	"itiswho.com/example/utils"
+	"itiswho.com/example/xtzx"
 )
 
+func init()  {
+	println("main init")
+}
 func main() {
-	fmt.Println(utils.Md5(utils.StrRand(12)))
+	xtzx.Save()
+	fmt.Println("over...")
 }
