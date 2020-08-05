@@ -333,6 +333,16 @@ module.exports = {
             /* ... */
           ],
         },
+        {
+          title: "汇编语言",
+          path: "/dragon/assemble/",
+          children: [
+            ["/dragon/assemble/x86指令集", "x86指令集"],
+            ["/dragon/assemble/mips指令集", "mips指令集"],
+            ["/dragon/assemble/arm指令集", "arm指令集"],
+            ["/dragon/assemble/数字", "数字"],
+          ],
+        },
       ],
       "/other/": [
         {
