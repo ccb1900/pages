@@ -20,11 +20,11 @@ type Node struct {
 }
 
 type RBTree struct {
-	root *Node
+	root     *Node
 	sentinel *Node
 }
 
-func New() *RBTree  {
+func New() *RBTree {
 	rb := new(RBTree)
 	node := new(Node)
 	node.color = BLACK
@@ -34,8 +34,8 @@ func New() *RBTree  {
 }
 
 // 递归插入
-func (rb *RBTree) insert(node *Node,key Key) *Node  {
-	if node==rb.sentinel {
+func (rb *RBTree) insert(node *Node, key Key) *Node {
+	if node == rb.sentinel {
 		n := new(Node)
 		n.right = rb.sentinel
 		n.left = rb.sentinel
@@ -43,35 +43,34 @@ func (rb *RBTree) insert(node *Node,key Key) *Node  {
 		n.key = key
 		n.color = RED
 
-		if node.color==RED {
+		if node.color == RED {
 			// 需要旋转
 
 		}
-		
-		
+
 		node = n
-		
-		
+
 	} else {
 		if node.key < key {
-			node.right = rb.insert(node.right,key)
+			node.right = rb.insert(node.right, key)
 		}
 		if node.key > key {
-			node.left = rb.insert(node.left,key)
+			node.left = rb.insert(node.left, key)
 		}
 	}
 
 	return node
 }
 
-func (rb *RBTree) fixup(node *Node)  {
+func (rb *RBTree) fixup(node *Node) {
 
 }
-func (rb *RBTree) delete(key Key)  {
+func (rb *RBTree) delete(key Key) {
 
 }
+
 // 迭代插入
-func (rb *RBTree) insertFor(key Key)  {
+func (rb *RBTree) insertFor(key Key) {
 	z := new(Node)
 	z.right = rb.sentinel
 	z.left = rb.sentinel
@@ -79,7 +78,7 @@ func (rb *RBTree) insertFor(key Key)  {
 
 	x := rb.root
 	y := rb.sentinel
-	for x!=y {
+	for x != y {
 		y = x
 
 		if z.key < x.key {

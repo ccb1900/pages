@@ -11,7 +11,7 @@ func TestQueue(t *testing.T) {
 	queue.Enqueue(2)
 	queue.Enqueue(3)
 
-	assert.EqualValues(t,1,queue.Dequeue())
-	assert.EqualValues(t,2,queue.Dequeue())
-	assert.EqualValues(t,3,queue.Dequeue())
+	assert.EqualValues(t, 1, queue.Dequeue())
+	assert.EqualValues(t, 2, queue.Dequeue())
+	assert.EqualValues(t, 3, queue.Dequeue())
 }

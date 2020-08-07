@@ -13,16 +13,17 @@ import (
 )
 
 type Meta struct {
-	Link string `json:"link"`
-	Title string `json:"title"`
+	Link   string `json:"link"`
+	Title  string `json:"title"`
 	Second string `json:"second"`
-	Third string `json:"third"`
-	Index int `json:"index"`
+	Third  string `json:"third"`
+	Index  int    `json:"index"`
 }
-func Save()  {
+
+func Save() {
 	//var wg sync.WaitGroup
 	var metas []Meta
-	data,err := ioutil.ReadFile("./xtzx.json")
+	data, err := ioutil.ReadFile("./xtzx.json")
 	if err != nil {
 		panic(err)
 	}
@@ -37,14 +38,14 @@ func Save()  {
 		//	wg.Done()
 		//}(i,metas[i])
 		Download(metas[i])
-		fmt.Println("over::"+strconv.Itoa(metas[i].Index))
+		fmt.Println("over::" + strconv.Itoa(metas[i].Index))
 		//wg.Done()
 	}
 
 	//wg.Wait()
 }
 
-func Download(meta Meta)  {
+func Download(meta Meta) {
 	//url := "http://ws.cdn.xuetangx.com/4e9f955a2cee7ca2-10.mp4?wsSecret=b3fc577fb523e6bd36c16c4b5210f7c5&wsTime=1596444993"
 
 	resp, err := http.Get(meta.Link)
@@ -55,13 +56,13 @@ func Download(meta Meta)  {
 	defer func() {
 		err := resp.Body.Close()
 
-		log.Println("close::",err)
+		log.Println("close::", err)
 	}()
 
-	name := strconv.Itoa(meta.Index)+"_"+meta.Title+"_"+meta.Second+"_"+meta.Third+".mp4"
+	name := strconv.Itoa(meta.Index) + "_" + meta.Title + "_" + meta.Second + "_" + meta.Third + ".mp4"
 
-	path := "/Users/ccb/Movies/学堂在线/清华操作系统/"+strings.Join(strings.Split(name,"/"),"")
-	f,_:=os.Create(path)
+	path := "/Users/ccb/Movies/学堂在线/清华操作系统/" + strings.Join(strings.Split(name, "/"), "")
+	f, _ := os.Create(path)
 
 	defer func() {
 		_ = f.Close()
@@ -69,7 +70,7 @@ func Download(meta Meta)  {
 
 	_, err = io.Copy(f, resp.Body)
 
-	if err !=nil {
-		fmt.Println(1002,err)
+	if err != nil {
+		fmt.Println(1002, err)
 	}
 }

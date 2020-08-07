@@ -7,9 +7,9 @@ type IGraph interface {
 	// 增加顶点
 	AddVertex(v IVNode)
 	// 增加边
-	AddEdge(u int,v int)
+	AddEdge(u int, v int)
 	// 获取顶点数量
-	V()  int
+	V() int
 	// 获取边的数量
 	E() int
 }

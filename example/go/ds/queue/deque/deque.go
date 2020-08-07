@@ -14,7 +14,7 @@ type Deque struct {
 	size int
 }
 
-func (d *Deque)AddFirst(e interface{})  {
+func (d *Deque) AddFirst(e interface{}) {
 	newNode := new(node)
 	newNode.data = e
 
@@ -28,7 +28,7 @@ func (d *Deque)AddFirst(e interface{})  {
 	d.size++
 }
 
-func (d *Deque)AddLast(e interface{})  {
+func (d *Deque) AddLast(e interface{}) {
 	newNode := new(node)
 	newNode.data = e
 
@@ -41,12 +41,12 @@ func (d *Deque)AddLast(e interface{})  {
 	d.rear = newNode
 	d.size++
 }
-func (d *Deque)RemoveFirst() interface{}  {
+func (d *Deque) RemoveFirst() interface{} {
 	if d.IsEmpty() {
 		return nil
 	}
 	oldNew := d.head
-	d.head = oldNew.next;
+	d.head = oldNew.next
 
 	if d.head != nil {
 		d.head.prev = nil
@@ -56,7 +56,7 @@ func (d *Deque)RemoveFirst() interface{}  {
 	return oldNew.data
 }
 
-func (d *Deque)RemoveLast() interface{}  {
+func (d *Deque) RemoveLast() interface{} {
 	if d.IsEmpty() {
 		return nil
 	}
@@ -64,7 +64,7 @@ func (d *Deque)RemoveLast() interface{}  {
 
 	d.rear = oldNew.prev
 
-	if d.rear!=nil {
+	if d.rear != nil {
 		d.rear.next = nil
 	}
 
@@ -73,25 +73,25 @@ func (d *Deque)RemoveLast() interface{}  {
 	return oldNew.data
 }
 
-func (d *Deque)PeekFirst() interface{}  {
+func (d *Deque) PeekFirst() interface{} {
 	if d.IsEmpty() {
 		return nil
 	}
 	return d.head.data
 }
 
-func (d *Deque)PeekLast() interface{}  {
+func (d *Deque) PeekLast() interface{} {
 	if d.IsEmpty() {
 		return nil
 	}
 	return d.rear.data
 }
 
-func (d *Deque)IsEmpty() bool {
-	return d.rear==d.head && d.head==nil && d.size == 0
+func (d *Deque) IsEmpty() bool {
+	return d.rear == d.head && d.head == nil && d.size == 0
 }
 
-func (d *Deque)FirstTraversal()  {
+func (d *Deque) FirstTraversal() {
 	if !d.IsEmpty() {
 		peek := d.head
 		for peek != nil {
@@ -101,7 +101,7 @@ func (d *Deque)FirstTraversal()  {
 	}
 }
 
-func (d *Deque)LastTraversal()  {
+func (d *Deque) LastTraversal() {
 	if !d.IsEmpty() {
 		peek := d.rear
 		for peek != nil {

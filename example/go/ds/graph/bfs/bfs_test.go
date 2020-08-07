@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBfs(t *testing.T)  {
+func TestBfs(t *testing.T) {
 	bfs := New()
 
 	// 连通图

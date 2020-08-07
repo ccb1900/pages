@@ -13,21 +13,21 @@ import (
 	"os"
 )
 
-func session()  {
+func session() {
 
 }
 func Server() {
-	pwd,_:= os.Getwd()
+	pwd, _ := os.Getwd()
 	model.DB()
 	store2.Map()
 	a := account.First("cb")
 	b := account.First("cbb")
-	fmt.Println(a,b)
+	fmt.Println(a, b)
 	r := gin.New()
 	store := cookie.NewStore([]byte("server-secret"))
 	r.Use(sessions.Sessions("server-session", store))
 
-	r.LoadHTMLGlob(pwd+"/templates/*")
+	r.LoadHTMLGlob(pwd + "/templates/*")
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 	r.GET("/404", auth.Error404)
@@ -47,6 +47,6 @@ func Server() {
 	_ = r.Run(":8100")
 }
 
-func FileExist()  {
-	fmt.Println(os.Getwd());
+func FileExist() {
+	fmt.Println(os.Getwd())
 }

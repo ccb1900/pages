@@ -4,8 +4,8 @@ import "itiswho.com/example/ds/graph/igraph"
 
 // 顶点节点
 type VNode struct {
-	data interface{} // 顶点数据
-	index int // 顶点索引
+	data  interface{}  // 顶点数据
+	index int          // 顶点索引
 	edges igraph.IList // 边表
 }
 
@@ -31,7 +31,7 @@ func (v *VNode) Edges() igraph.IList {
 	return v.edges
 }
 
-func IVNode(index int,data interface{}) igraph.IVNode  {
+func IVNode(index int, data interface{}) igraph.IVNode {
 	newNode := new(VNode)
 	newNode.edges = IIList()
 	newNode.data = data

@@ -8,13 +8,13 @@ import (
 
 type Account struct {
 	gorm.Model
-	Account string `json:"account"`
+	Account  string `json:"account"`
 	Password string `json:"password"`
 }
 
-func Migrate()  {
-	pwd,_ := os.Getwd()
-	db,err := gorm.Open("sqlite3",pwd+"/test.db")
+func Migrate() {
+	pwd, _ := os.Getwd()
+	db, err := gorm.Open("sqlite3", pwd+"/test.db")
 	if err != nil {
 		panic("failed to connect db")
 	}
@@ -26,7 +26,7 @@ func Migrate()  {
 
 	db.AutoMigrate(&account)
 
-	db.Create(&Account{Account:"ccb",Password:"123456"})
-	db.Create(&Account{Account:"cb",Password:"123456"})
+	db.Create(&Account{Account: "ccb", Password: "123456"})
+	db.Create(&Account{Account: "cb", Password: "123456"})
 
 }
