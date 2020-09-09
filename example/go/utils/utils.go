@@ -77,3 +77,7 @@ func ToChar(v int) string {
 	}
 	return string(v)
 }
+
+func Test() {
+	fmt.Println("test")
+}
