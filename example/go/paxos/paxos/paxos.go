@@ -1,19 +1,18 @@
 package paxos
 
 type Proposer struct {
-	no int
+	no    int
 	value string
 }
 
-func (p *Proposer)Broadcast()  {
+func (p *Proposer) Broadcast() {
 	p.no++
 	// 发送到所有的acceptor
 }
+
 type Acceptor struct {
-	
 }
 
-func Counter(machine int)  {
-	
-}
+func Counter(machine int) {
 
+}

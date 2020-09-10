@@ -5,10 +5,12 @@ import (
 	"itiswho.com/example/xtzx"
 )
 
-func init()  {
+func init() {
 	println("main init")
 }
 func main() {
 	xtzx.Save()
+
+	fmt.Println("over...")
 	fmt.Println("over...")
 }

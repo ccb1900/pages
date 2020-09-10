@@ -11,7 +11,7 @@ type Queue struct {
 	size int
 }
 
-func (queue *Queue)Enqueue(v interface{})  {
+func (queue *Queue) Enqueue(v interface{}) {
 	newNode := new(node)
 	newNode.data = v
 
@@ -25,7 +25,7 @@ func (queue *Queue)Enqueue(v interface{})  {
 	queue.size++
 }
 
-func (queue *Queue)Dequeue() interface{}  {
+func (queue *Queue) Dequeue() interface{} {
 	if queue.IsEmpty() {
 		panic("the queue is empty")
 	}
@@ -35,15 +35,15 @@ func (queue *Queue)Dequeue() interface{}  {
 	return old.data
 }
 
-func (queue *Queue)IsEmpty() bool  {
+func (queue *Queue) IsEmpty() bool {
 	return queue.head.next == nil
 }
 
-func (queue *Queue)Size() int  {
+func (queue *Queue) Size() int {
 	return queue.size
 }
 
-func New() *Queue  {
+func New() *Queue {
 	q := new(Queue)
 	q.head = new(node)
 	q.rear = q.head

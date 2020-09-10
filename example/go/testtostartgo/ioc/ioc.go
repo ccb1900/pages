@@ -2,6 +2,6 @@ package ioc
 
 import "fmt"
 
-func Greet(name string)  {
+func Greet(name string) {
 	fmt.Printf("hello,%s\n", name)
 }

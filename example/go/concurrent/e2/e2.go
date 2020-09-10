@@ -2,7 +2,7 @@ package e2
 
 import "sync"
 
-func Handle()  {
+func Handle() {
 	//ch := make(chan int)
 	//
 	//ch <- 10
@@ -14,6 +14,5 @@ func Handle()  {
 	var mutex sync.Mutex
 	//mutex.Lock()
 	defer mutex.Unlock()
-
 
 }

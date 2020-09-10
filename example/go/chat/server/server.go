@@ -8,81 +8,81 @@ import (
 )
 
 type Server struct {
-	port string
+	port    string
 	clients map[int]Client
 }
 
 type Group struct {
-	name string
-	id int
+	name    string
+	id      int
 	members map[int]Client
 }
 type Client struct {
-	s *Server
-	c net.Conn
-	id int
+	s     *Server
+	c     net.Conn
+	id    int
 	group Group
 }
 
-func (c *Client) sendToOne(target *Client,s string)  {
+func (c *Client) sendToOne(target *Client, s string) {
 	target.write(s)
 }
 
-func (c *Client) sendToGroup()  {
+func (c *Client) sendToGroup() {
 
 }
 
-func (c *Client) decode()  {
+func (c *Client) decode() {
 
 }
-func (c *Client) write(s string)  {
-	w:=bufio.NewWriter(c.c)
+func (c *Client) write(s string) {
+	w := bufio.NewWriter(c.c)
 
 	_, err := w.WriteString(s)
 
 	if err != nil {
-		log.Fatalln("conn write failed \n",err)
+		log.Fatalln("conn write failed \n", err)
 	}
 
 	err = w.Flush()
 
 	if err != nil {
-		log.Fatalln("conn flush failed \n",err)
+		log.Fatalln("conn flush failed \n", err)
 	}
 }
 
-func (c *Client) handle()  {
-	contents,err := bufio.NewReader(c.c).ReadString('\n')
+func (c *Client) handle() {
+	contents, err := bufio.NewReader(c.c).ReadString('\n')
 	if err != nil {
-		log.Fatalln("conn failed \n",err)
+		log.Fatalln("conn failed \n", err)
 	}
 
 	fmt.Println(contents)
 }
 
-func (s *Server) Run()  {
-	ln,err := net.Listen("tcp",s.port)
+func (s *Server) Run() {
+	ln, err := net.Listen("tcp", s.port)
 
 	if err != nil {
-		log.Fatalln("server start failed \n",err)
+		log.Fatalln("server start failed \n", err)
 	}
 	defer func() {
 		err := ln.Close()
 		if err != nil {
-			log.Fatalln("server close failed \n",err)
+			log.Fatalln("server close failed \n", err)
 		}
 	}()
 
-	fmt.Printf("start at %s\n",s.port)
-	for  {
+	fmt.Printf("start at %s\n", s.port)
+	for {
 		fmt.Println(" waiting client to connect... ")
-		conn,err := ln.Accept()
+		conn, err := ln.Accept()
 
 		if err != nil {
-			log.Fatalln("conn failed \n",err)
+			log.Fatalln("conn failed \n", err)
 		}
 
-		fmt.Printf("client connected,%s\n",conn.RemoteAddr().String())
+		fmt.Printf("client connected,%s\n", conn.RemoteAddr().String())
 
 		client := new(Client)
 		client.c = conn
@@ -91,13 +91,13 @@ func (s *Server) Run()  {
 	}
 }
 
-func (s *Server)Handle(c *Client)  {
-	for  {
+func (s *Server) Handle(c *Client) {
+	for {
 		c.handle()
 	}
 }
 
-func New() *Server  {
+func New() *Server {
 	s := new(Server)
 	s.port = ":10010"
 	return s

@@ -17,6 +17,6 @@ func Server() {
 
 	authM := r.Group("/")
 	authM.Use(middleware.Auth())
-	authM.GET("/",home.Index)
+	authM.GET("/", home.Index)
 	_ = r.Run(":8101")
 }

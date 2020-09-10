@@ -1,4 +1,5 @@
 package dp
+
 // 最长连续不重复子序列
 import (
 	"fmt"
@@ -7,7 +8,7 @@ import (
 
 type max struct {
 	start int
-	end int
+	end   int
 }
 type Dp struct {
 	longest string
@@ -15,18 +16,18 @@ type Dp struct {
 	current max
 }
 
-func (d *Dp)Run(s string)  {
+func (d *Dp) Run(s string) {
 	d.longest = string(s[0])
 	for i := 0; i < len(s); i++ {
-		d.pass(string(s[i]),i)
+		d.pass(string(s[i]), i)
 	}
 
 	fmt.Println(d.max)
 }
 
-func (d *Dp) pass(a string,index int)  {
-	if strings.Contains(d.longest,a) {
-		if (d.max.end-d.max.start) < (d.current.end-d.current.start) {
+func (d *Dp) pass(a string, index int) {
+	if strings.Contains(d.longest, a) {
+		if (d.max.end - d.max.start) < (d.current.end - d.current.start) {
 			d.max = d.current
 		}
 		d.current.start = index
@@ -34,6 +35,6 @@ func (d *Dp) pass(a string,index int)  {
 		d.current.end = index
 	}
 }
-func New()  *Dp {
+func New() *Dp {
 	return new(Dp)
 }

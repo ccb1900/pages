@@ -91,6 +91,8 @@ date: 2020-08-06
 
 ##### 过程
 
+会话状态的密码参数由TLS握手协议产生，该协议在TLS记录层之上运行。当TLS客户端和服务器第一次开始通信时，它们就协议版本达成一致，选择加密算法，可选地相互验证，并使用公钥加密技术生成共享密钥。
+
 实际使用的是对称加密。
 
 - 客户端发送：我是客户端，向你跑了一个白眼
@@ -102,8 +104,7 @@ date: 2020-08-06
 - 客户端：我收到了加密的响应
 
 
-
-
+[http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
 
 #### http
 
@@ -112,6 +113,9 @@ date: 2020-08-06
 ## 多线程
 
 ### 交替打印
+
+<<< @/example/go/others/test.go
+<<< @/example/go/others/test_test.go
 
 ## 微服务
 
@@ -144,3 +148,9 @@ date: 2020-08-06
 ### 路由原理
 
 ### 分组有序
+
+## go 语言
+
+https://chai2010.cn/advanced-go-programming-book/ch1-basic/readme.html
+
+## docker

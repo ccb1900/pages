@@ -7,8 +7,8 @@ import (
 )
 
 type node struct {
-	data interface{}
-	left *node
+	data  interface{}
+	left  *node
 	right *node
 }
 
@@ -17,26 +17,27 @@ type Tree struct {
 }
 
 type Comparable interface {
-	
 }
+
 // 插入
-func (t *Tree)Insert(root *node,data interface{}) *node  {
+func (t *Tree) Insert(root *node, data interface{}) *node {
 	newNode := new(node)
 	newNode.data = data
 	if root == nil {
 		root = newNode
 	} else {
 		if root.data.(int) > data.(int) {
-			root.left = t.Insert(root.left,data)
+			root.left = t.Insert(root.left, data)
 		} else if root.data.(int) < data.(int) {
-			root.right = t.Insert(root.right,data)
+			root.right = t.Insert(root.right, data)
 		}
 	}
 
 	return root
 }
+
 // 先序遍历
-func (t *Tree) PreOrderTraversal(root *node)  {
+func (t *Tree) PreOrderTraversal(root *node) {
 	if root == nil {
 		panic("tree is empty")
 	}
@@ -50,8 +51,9 @@ func (t *Tree) PreOrderTraversal(root *node)  {
 		t.PreOrderTraversal(root.right)
 	}
 }
+
 // 中序遍历
-func (t *Tree) InOrderTraversal(root *node)  {
+func (t *Tree) InOrderTraversal(root *node) {
 	if root == nil {
 		panic("tree is empty")
 	}
@@ -64,8 +66,9 @@ func (t *Tree) InOrderTraversal(root *node)  {
 		t.InOrderTraversal(root.right)
 	}
 }
+
 // 后序遍历
-func (t *Tree) PostOrderTraversal(root *node)  {
+func (t *Tree) PostOrderTraversal(root *node) {
 	if root == nil {
 		panic("tree is empty")
 	}
@@ -81,7 +84,7 @@ func (t *Tree) PostOrderTraversal(root *node)  {
 }
 
 // 层次遍历(广度优先遍历)，队列实现
-func (t *Tree)LayerTraversal(root *node)  {
+func (t *Tree) LayerTraversal(root *node) {
 	if root == nil {
 		panic("tree is empty")
 	}
@@ -94,7 +97,7 @@ func (t *Tree)LayerTraversal(root *node)  {
 
 		fmt.Println(root.data)
 
-		if root.left !=nil {
+		if root.left != nil {
 			queue.Enqueue(root.left)
 		}
 		if root.right != nil {
@@ -105,8 +108,8 @@ func (t *Tree)LayerTraversal(root *node)  {
 
 /**
 深度优先遍历（先序遍历，后序遍历，中序遍历 分为递归实现和栈实现）
- */
-func (t *Tree)DepthTraversal(root *node)  {
+*/
+func (t *Tree) DepthTraversal(root *node) {
 	if root == nil {
 		panic("tree is empty")
 	}
@@ -124,7 +127,7 @@ func (t *Tree)DepthTraversal(root *node)  {
 			s.Push(top.right)
 		}
 		// 左子树入栈
-		if top.left !=nil {
+		if top.left != nil {
 			s.Push(top.left)
 		}
 	}
@@ -135,5 +138,3 @@ func New() *Tree {
 
 	return t
 }
-
-

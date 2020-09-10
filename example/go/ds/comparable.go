@@ -6,7 +6,7 @@ type Comparable interface {
 
 type Element int
 
-func (e Element)CompareTo(el Element) int  {
+func (e Element) CompareTo(el Element) int {
 	if e > el {
 		return 1
 	} else if e == el {

@@ -6,15 +6,17 @@ import (
 	"path/filepath"
 	"sync"
 )
+
 var db *gorm.DB
 var lock sync.Mutex
-func DB() *gorm.DB  {
+
+func DB() *gorm.DB {
 	lock.Lock()
 	defer lock.Unlock()
 	if db == nil {
-		p,_ := filepath.Abs("../model/migration/test.db")
+		p, _ := filepath.Abs("../model/migration/test.db")
 		fmt.Println(p)
-		dbb,err := gorm.Open("sqlite3",p)
+		dbb, err := gorm.Open("sqlite3", p)
 
 		if err != nil {
 			panic("failed to connect db")

@@ -1,6 +1,6 @@
 package spider_quark
 
-func Spider()  {
+func Spider() {
 	//url :="https://quark.sm.cn/api/rest?format=json&method=QuarkGaoKao2020.majorDetail&college=武汉大学&major=临床医学类&score_major=&batch=本科一批&year=2020&location=湖北&aos=理科&score=623&student_rank=&subjects=理科"
 }
 

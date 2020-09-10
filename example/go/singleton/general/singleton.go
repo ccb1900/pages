@@ -1,13 +1,12 @@
 package general
 
 type Singleton struct {
-	
 }
 
 var instance *Singleton
 
 func GetInstance() *Singleton {
-	if instance ==nil {
+	if instance == nil {
 		instance = new(Singleton)
 	}
 

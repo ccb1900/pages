@@ -6,10 +6,11 @@ type node struct {
 }
 
 type Stack struct {
-	top *node
+	top  *node
 	size int
 }
-func (s *Stack)Push(e interface{}){
+
+func (s *Stack) Push(e interface{}) {
 	s.size++
 	newNode := new(node)
 	newNode.data = e
@@ -17,7 +18,7 @@ func (s *Stack)Push(e interface{}){
 	s.top.next = newNode
 }
 
-func (s *Stack)Pop() interface{}  {
+func (s *Stack) Pop() interface{} {
 	if s.IsEmpty() {
 		panic("the stack is empty")
 	}
@@ -27,12 +28,11 @@ func (s *Stack)Pop() interface{}  {
 	return old.data
 }
 
-
-func (s *Stack)IsEmpty() bool  {
+func (s *Stack) IsEmpty() bool {
 	return s.size == 0
 }
 
-func (s *Stack)Size() int  {
+func (s *Stack) Size() int {
 	return s.size
 }
 func New() *Stack {
