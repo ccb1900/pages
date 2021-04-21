@@ -29,7 +29,7 @@ module.exports = {
       },
     ],
   ],
-  base: "/pages/",
+  base: "/",
   logo: "/logo.png",
   description: "java,mysql,php,redis,消息队列,laravel,spring",
   head: [["link", { rel: "ico", href: `/logo.png` }]],
