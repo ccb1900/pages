@@ -1,5 +1,5 @@
 module.exports = {
-  title: "献给新一代的文档",
+  title: "搬砖的故事",
   plugins: [
     require("./plugins/baidu-analytics/index.js"),
     [
@@ -47,6 +47,7 @@ module.exports = {
       { text: "其他", link: "/other/" },
       { text: "菜谱", link: "/recipe/" },
       { text: "博客", link: "/post/" },
+      { text: "应用", link: "/app/" },
       { text: "Github", link: "https://github.com/ccb1900/pages" },
     ],
     sidebar: {
