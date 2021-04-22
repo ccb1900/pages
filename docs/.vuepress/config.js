@@ -163,8 +163,13 @@ module.exports = {
         },
         {
           title: "Mysql",
+          path: "/backend/mysql/",
           children: [
-            /* ... */
+            ["/backend/mysql/", "概述"],
+            ["/backend/mysql/索引", "索引"],
+            ["/backend/mysql/", "发布者"],
+            ["/backend/mysql/", "消费者"],
+            ["/backend/mysql/", "例子"],
           ],
         },
         {
