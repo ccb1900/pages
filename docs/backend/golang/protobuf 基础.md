@@ -92,6 +92,17 @@ message Test {
 map<string, Project> projects = 3;
 ```
 
+兼容性，map 就相当于下面的写法，因此可以保障兼容性
+
+```
+message MapFieldEntry {
+  key_type key = 1;
+  value_type value = 2;
+}
+
+repeated MapFieldEntry map_field = N;
+```
+
 ## 包
 ## 定义服务
 ## json 映射
