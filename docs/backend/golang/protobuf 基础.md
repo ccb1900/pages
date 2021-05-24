@@ -23,7 +23,7 @@ message SearchRequest {
 - 数字16到2047使用两个字节
 - 频繁使用的字段最好用1-15，为未来可能添加的频繁使用的字段留出数字。
 - 数字最小是1，最大是2的29次方减去1或者 536870911，19000-19999属于保留数字。
-- 默认是0或1个，repeated 是大于1
+- 默认是0或1个，repeated 是大于1（数组吧，列表）
 - 一个proto文件可以有多个消息类型
 - 支持行注释和块注释
 
@@ -38,8 +38,46 @@ message Foo {
 - 数字和名称要分别标注
 
 ## 标量值类型
+
+double，float，int32等
+
+https://developers.google.com/protocol-buffers/docs/proto3#scalar
+
+
 ## 默认值
+
+- 字符串是空字符串
+- 字节是空字节
+- 布尔是false
+- 数字是0
+- 枚举是第一个被定义的枚举值，必须是0
+- 消息字段依赖于特定的语言
+- repeated字段是空，一般是个空列表，这个看语言
+
 ## 枚举
+
+当你定义一个消息类型，你可能想要某些字段的值是预定义值列表的一个。
+
+```
+enum Corpus {
+  UNIVERSAL = 0;// 第一个必须是0
+  WEB  = 1;
+  IMAGES  = 2;
+  LOCAL  = 3;
+  NEWS  = 4;
+  PRODUCTS  = 5;
+  VIDEO  = 6;
+}
+
+message Test {
+  enum Gender {
+    M = 0;
+    F = 2;
+  }
+  Gender gender = 8;
+}
+```
+
 ## 使用其他消息类型
 ## 嵌套类型
 ## 更新消息类型
