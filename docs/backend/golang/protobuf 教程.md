@@ -4,5 +4,10 @@
 - [golang 插件安装](https://github.com/protocolbuffers/protobuf-go)，之后可以使用 protoc-gen-go 命令，会安装到$GOBIN
 
 ```
+go install google.golang.org/protobuf/cmd/protoc-gen-go
+```
+
+
+```
 protoc -I=$SRC_DIR --go_out=$DST_DIR $SRC_DIR/addressbook.proto
 ```
