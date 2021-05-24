@@ -33,8 +33,16 @@ go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 ## 例子
 
-需要辅助go_package
+直接生成，需要辅助go_package
 
 ```
 protoc --go_out=./proto/helloworld/pb ./proto/helloworld/pb/test.proto
 ```
+
+
+grpc 生成
+
+```
+protoc --go_out=proto/helloworld --go-grpc_out=proto/helloworld ./proto/helloworld/pb/test.proto
+```
+
