@@ -84,9 +84,18 @@ message Test {
 ## 未知字段
 ## any
 ## oneof
-## 映射
+## 映射(map)
+
+主要是讲map类型如何定义，map类型不能用repeated修饰
+
+```
+map<string, Project> projects = 3;
+```
+
 ## 包
 ## 定义服务
 ## json 映射
 ## 选项
 ## 生成你自己的类
+
+对命令参数进行了简单的介绍。
