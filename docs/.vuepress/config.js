@@ -69,7 +69,11 @@ module.exports = {
             ["/backend/golang/单例模式", "golang 单例模式"],
             ["/backend/golang/go 语言设计与实现", "golang 语言设计与实现"],
             ["/backend/golang/常用工具函数", "golang 常用工具函数"],
-            ["/backend/golang/1900-22-go 并发机制", "并发机制"],
+            ["/backend/golang/protobuf 基础", "protobuf 基础"],
+            ["/backend/golang/protobuf 风格", "protobuf 风格"],
+            ["/backend/golang/protobuf 教程", "protobuf 教程"],
+            ["/backend/golang/protobuf 编码", "protobuf 编码"],
+            ["/backend/golang/protobuf 技巧", "protobuf 技巧"],
           ],
         },
         {
