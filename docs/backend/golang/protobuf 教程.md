@@ -17,3 +17,11 @@ protoc -I=$SRC_DIR --go_out=$DST_DIR $SRC_DIR/addressbook.proto
 ```
 go get -u google.golang.org/protobuf
 ```
+
+## 例子
+
+需要辅助go_package
+
+```
+protoc --go_out=./proto/helloworld/pb ./proto/helloworld/pb/test.proto
+```
