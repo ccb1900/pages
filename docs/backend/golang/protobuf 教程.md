@@ -15,7 +15,13 @@ protoc -I=$SRC_DIR --go_out=$DST_DIR $SRC_DIR/addressbook.proto
 - 在go项目中安装运行时
 
 ```
-go get -u google.golang.org/protobuf
+go get google.golang.org/protobuf
+```
+
+- 安装grpc
+
+```
+go get google.golang.org/grpc
 ```
 
 ## 例子
