@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-09T02:28:37.461Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="SmJKndbiUJw0wt-EY7u8" version="14.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-09T02:32:38.838Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="qhpwBDMGKpr6Z7FbA23e" version="14.8.1" type="github">
   <diagram id="kFYnImU_61pwE3nKOwQQ" name="Page-1">
     <mxGraphModel dx="946" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -72,6 +72,14 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8MOW-syFpqiqDsgKMTjz-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8MOW-syFpqiqDsgKMTjz-19" target="8MOW-syFpqiqDsgKMTjz-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="370" />
+              <mxPoint x="600" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8MOW-syFpqiqDsgKMTjz-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="8MOW-syFpqiqDsgKMTjz-19" target="8MOW-syFpqiqDsgKMTjz-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8MOW-syFpqiqDsgKMTjz-19" value="我大姨" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
@@ -85,6 +93,15 @@
         </mxCell>
         <mxCell id="8MOW-syFpqiqDsgKMTjz-25" value="乐妮" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="550" y="530" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8MOW-syFpqiqDsgKMTjz-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8MOW-syFpqiqDsgKMTjz-27" target="8MOW-syFpqiqDsgKMTjz-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8MOW-syFpqiqDsgKMTjz-27" value="我表哥" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="707" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8MOW-syFpqiqDsgKMTjz-31" value="静雯" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="707" y="530" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
