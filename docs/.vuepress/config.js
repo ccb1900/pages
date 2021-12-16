@@ -222,6 +222,8 @@ module.exports = {
           title: "React",
           children: [
             /* ... */
+            ["/front/react/react 简介", "react 简介"],
+            ["/front/react/redux 入门", "redux 入门"],
           ],
         },
         {
