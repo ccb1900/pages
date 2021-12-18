@@ -56,3 +56,21 @@ useEffect(() => {
 
 自定义hooks可以将组件逻辑提取到可复用的函数中。
 
+```js
+
+// 自定义hooks
+const useCc = (count) => {
+    const [cc,setCc] = useState(0)
+    useEffect(() => {
+        console.log('use effect start',count)
+        setCc(count)
+        return () => {
+            console.log('use effect clear',count)
+        }
+    },[count])
+
+    return cc
+}
+
+```
+

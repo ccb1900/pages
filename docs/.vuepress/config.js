@@ -74,6 +74,7 @@ module.exports = {
             ["/backend/golang/protobuf 教程", "protobuf 教程"],
             ["/backend/golang/protobuf 编码", "protobuf 编码"],
             ["/backend/golang/protobuf 技巧", "protobuf 技巧"],
+            ["/backend/golang/多版本golang安装", "多版本golang安装"],
           ],
         },
         {
